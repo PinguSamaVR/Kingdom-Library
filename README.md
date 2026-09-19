@@ -2,38 +2,40 @@
 
 **Your library, your rules.**
 
-A lightweight, offline Steam-like game library manager for Windows.
+A lightweight, offline game library manager for Windows.
 
-Kingdom is designed to keep your local game collection organized, accessible, and entirely under your control. It brings repacks, installed games, covers, playtime, local folders, and common game-management actions together in one clean interface.
+Kingdom keeps your local game collection organized and under your control, bringing repacks, installed games, covers, playtime, updates, save backups, local folders, and common management actions together in one clean interface.
 
-> **Current release:** Kingdom 1.0.1
+> **Current release:** Kingdom 1.1.2
 
 ## Download
 
-The current public release is available on itch.io:
+- **GitHub Releases:** https://github.com/PinguSamaVR/Kingdom-Library/releases
+- **itch.io:** https://pingusama.itch.io/kingdom-library
 
-**https://pingusama.itch.io/kingdom-library**
+Download the complete Windows release and keep all bundled files together.
 
-GitHub Releases will also be used for packaged Windows builds.
+## Highlights
 
-## Features
-
-- Local game library management in a single interface
-- Installed / not installed filtering
-- Repack and installed-size information
+- Local library management in a single interface
+- Installed / not installed filters and library search
 - Install, launch, and uninstall actions
-- Local files access for installed games
-- Repack-folder access from each game card
-- Custom cover selection
-- Automatic cover detection when exactly one valid image is present
+- Automatic and manual launch-executable selection
+- Local files and repack-folder access
+- Custom and automatic cover selection
 - Persistent playtime tracking
-- Playtime reset tools
-- Repack management and deletion tools
+- Game Update Manager
+- Automatic ZIP, 7Z, and RAR update handling
+- Per-game **Update Archive**
+- Save Manager with backup, restore, delete, and open-folder actions
+- Automatic save backup before game updates when available
+- Clean uninstall option for local game data and saves
+- Existing-backup warning when reinstalling a game
 - Configurable repack and installation folders
 - First-launch setup wizard
 - Fully offline operation
 - No account or registration required
-- Multilingual interface
+- Five interface languages
 
 ## Supported languages
 
@@ -45,204 +47,171 @@ GitHub Releases will also be used for packaged Windows builds.
 
 ## Installation
 
-1. Download the complete Kingdom release folder.
-2. Keep `Kingdom.exe` together with the `_internal` folder and all bundled resources.
-3. Do **not** move `Kingdom.exe` out of the release folder.
-4. Launch `Kingdom.exe`.
-5. Windows may request permission when Kingdom starts installers, games, or uninstallers with elevated privileges. Approve only when you recognize the action.
+1. Download and extract the complete Kingdom release.
+2. Keep `Kingdom.exe` together with all bundled files and folders.
+3. Launch `Kingdom.exe`.
+4. Windows may request permission when Kingdom starts an installer, updater, game, or uninstaller with elevated privileges. Approve only when you recognize the action.
 
-Python is **not required** for end users. Kingdom is distributed as a compiled Windows application.
+Python is **not required** for end users.
 
 ## First launch
 
-On first launch, Kingdom guides you through the initial setup:
+Kingdom guides you through the initial setup:
 
 1. Select your language.
-2. Choose the folder containing your repack folders.
-3. Choose how Kingdom should handle the game installation folder:
-   - allow Kingdom to create one automatically; or
-   - select an existing folder manually.
+2. Choose the folder containing your repacks.
+3. Choose your game installation folder.
 
-If Kingdom creates the folder automatically, it creates a folder named:
+If you let Kingdom create the installation folder automatically, the default path is:
 
 ```text
-installed Kingdom Games
+C:\KingdomGames
 ```
 
-inside the parent folder that contains your repack folder.
-
-## Folder structure
-
-Kingdom expects each repack to be stored in its own subfolder.
-
-Example:
-
-```text
-Repacks/
-├─ Game One/
-├─ Game Two/
-└─ Game Three/
-```
-
-Kingdom identifies installed games by checking whether the expected game folder exists inside the configured installation folder.
-
-Example:
-
-```text
-Installed Games/
-└─ Game One/
-```
-
-If you select an installation folder that already contains games, Kingdom can recognize them when:
-
-- the corresponding repack is also present in the library;
-- the installed folder name matches the title Kingdom expects.
-
-More advanced recognition of already-installed games is planned for a future version.
+You can also select another folder manually.
 
 ## Library
 
-The main library displays repacks as game cards. Each card can show:
+Each game card can show its cover, title, repack size, installation status, installed size, and tracked playtime.
 
-- cover image;
-- game title;
-- repack size;
-- installation status;
-- installed size;
-- tracked playtime;
-- `INSTALL`, `LAUNCH`, or `UNINSTALL` actions depending on the game state.
+Use the library filters and search bar to quickly find games.
 
-### Filters
+Depending on the current state, the main action becomes:
 
-Use:
-
-- `ALL`
-- `INSTALLED`
-- `NOT INSTALLED`
-
-for quick library filtering.
+- `INSTALL`
+- `LAUNCH`
+- `UNINSTALL`
 
 ## Installing a game
 
-1. Press `INSTALL` on a game card.
+1. Press `INSTALL`.
 2. Kingdom prepares the expected installation path.
-3. Copy the path shown in the installation window.
-4. Press `OPEN INSTALLER`.
-5. Kingdom launches `setup.exe` from the repack folder with elevated privileges.
-6. Paste the proposed path into the game installer when needed.
+3. Copy the path when requested.
+4. Open the installer.
+5. Use the proposed path in the installer.
 
-Kingdom does not replace the original installer. It helps keep installation paths consistent.
+If Kingdom detects existing save backups for that game, it warns you before continuing.
 
 ## Launching a game
 
-When Kingdom detects a game as installed, `INSTALL` becomes `LAUNCH`.
+Press `LAUNCH` after installation.
 
-Press `LAUNCH` to start the detected game executable. Kingdom may request elevated privileges.
+Kingdom tries to identify the correct executable automatically and remembers the selected file.
+
+If the wrong executable is detected, open the game-card gear menu and use **Launch executable** to choose the correct one manually.
+
+## Save Manager
+
+After the game has been launched through Kingdom, open:
+
+```text
+Gear menu → Saves
+```
+
+You can:
+
+- create a save backup;
+- restore a previous backup;
+- delete the current local saves;
+- open the original save folder.
+
+Backups are stored by game inside:
+
+```text
+Savedata backup
+```
+
+Kingdom keeps multiple backups without silently overwriting earlier ones.
+
+Before restoring a backup, Kingdom tries to create a safety backup of the current saves when possible.
+
+## Updating a game
+
+Open:
+
+```text
+Gear menu → Update
+```
+
+Kingdom can work with supported update folders and ZIP, 7Z, or RAR archives.
+
+Follow the guided procedure and use the installation path shown by Kingdom when the external updater asks for it.
+
+Before an update, Kingdom tries to back up the current saves when their location is known.
+
+Completed updates are archived by game inside:
+
+```text
+Update Archive
+```
+
+Kingdom currently handles **one update at a time**.
 
 ## Uninstalling a game
 
-1. Press `UNINSTALL`.
-2. Confirm the action.
-3. Kingdom searches the Windows uninstall registry entries for the game.
-4. If a valid uninstaller is found, Kingdom launches it.
-5. Complete the uninstall procedure.
-6. If the installation folder still exists afterward, Kingdom can ask whether you want to remove the remaining files.
+Press `UNINSTALL` and follow the confirmation prompts.
 
-Always review destructive prompts carefully before confirming.
+A **Clean uninstall** option can also remove detected local save data and related local game data.
+
+Existing backups stored in `Savedata backup` are preserved.
 
 ## Game-card gear menu
 
-Press the gear icon on a game card to open the quick menu.
+The gear menu provides quick access to actions such as:
 
-### Cover
-Select a cover manually.
+- Cover
+- Repack path
+- Local files
+- Playtime
+- Update
+- Saves
+- Launch executable
+- Delete repack
 
-### Path
-Open the repack folder.
+When deleting a repack, Kingdom can separately ask whether the archived updates for that game should also be removed.
 
-### Local files
-Visible only when the game is installed. Opens the detected installation folder.
-
-### Playtime
-Reset the recorded playtime after confirmation.
-
-### Delete repack
-Permanently deletes the entire repack folder after two confirmations.
-
-> **Warning:** `Delete repack` removes the repack folder from disk. This operation is irreversible.
+Save backups are kept separate.
 
 ## Covers
 
-### Manual cover
-Use the gear menu → **Cover** and select a supported image.
+You can select a cover manually.
 
-### Automatic cover
-If no cover is already configured, Kingdom checks the repack folder:
+If no cover is already configured, Kingdom can automatically use an image found directly in the repack folder when there is exactly one valid candidate.
 
-- **0 valid images:** no action;
-- **exactly 1 valid image:** Kingdom assigns it automatically;
-- **2 or more valid images:** no automatic choice is made.
-
-Kingdom does not automatically overwrite an already configured cover.
-
-Supported formats:
+Supported formats include:
 
 `PNG`, `JPG`, `JPEG`, `WEBP`, `BMP`
 
 ## Playtime
 
-Kingdom tracks playtime while it detects a game process running from the configured installation folder.
+Kingdom tracks playtime while a launched game process is running.
 
-Playtime is saved persistently and can be reset from:
-
-- the game-card gear menu;
-- `Settings → Playtime`.
+Tracked time is persistent and can be reset from the available playtime controls after confirmation.
 
 ## Settings
 
-### Folders
-Change the repack folder and game installation folder.
+From Settings you can manage:
 
-### Repack management
-Open repack management, delete repacks, or reset the initial folder configuration.
+- folders;
+- language;
+- playtime;
+- Kingdom reset;
+- tutorial / FAQ;
+- other application information.
 
-### Language
-Change the interface language. The interface updates immediately.
+Changing the interface language takes effect immediately.
 
-### Playtime
-Select a game and reset its tracked playtime.
+## Resetting Kingdom
 
-### About Kingdom
-Access the tutorial / FAQ and other information pages.
+The reset makes Kingdom forget the configured repack and installation folders so the initial setup appears again at the next launch.
 
-## Resetting the initial configuration
-
-Go to:
-
-```text
-Settings → Repack management → RESET
-```
-
-The reset:
-
-- forgets the configured repack folder;
-- forgets the configured installation folder;
-- does **not** delete, move, or modify any file or folder.
-
-After two confirmations, the first-launch wizard appears again on the next start.
-
-## Planned improvements
-
-Future development currently includes improvements such as:
-
-- smarter recognition of games that are already installed;
-- local save-game management.
+It does **not** delete your games, repacks, save backups, or other personal files.
 
 ## Legal note
 
 Kingdom is a local library and game-management utility.
 
-It does **not** provide games, repacks, download sources, cracks, DRM-bypass tools, or piracy links. Kingdom is intended to manage local files and software that users have obtained lawfully.
+It does **not** provide games, repacks, download sources, cracks, DRM-bypass tools, or piracy links. Use Kingdom only with files and software obtained lawfully.
 
 ## Closed-source project
 
@@ -252,7 +221,9 @@ Kingdom is distributed as proprietary software. The source code is not published
 
 Created by **PinguSama**.
 
+Thanks for downloading, trying, and supporting Kingdom. Feedback is always welcome.
+
 ---
 
-**Kingdom 1.0.1**  
+**Kingdom 1.1.2**  
 *Your library, your rules.*
