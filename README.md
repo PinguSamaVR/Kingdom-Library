@@ -6,7 +6,7 @@ A lightweight, offline game library manager for Windows.
 
 Kingdom keeps your local game collection organized and under your control, bringing repacks, installed games, covers, playtime, updates, save backups, local folders, and common management actions together in one clean interface.
 
-> **Current release:** Kingdom 1.1.2
+> **Current release:** Kingdom 1.1.3
 
 ## Download
 
