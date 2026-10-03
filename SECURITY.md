@@ -1,43 +1,76 @@
 # Security Policy
 
-## Supported version
+## Supported versions
 
-Security-related fixes are currently provided for the latest public Kingdom release.
+Security fixes are evaluated for the current public release.
 
 | Version | Supported |
 | --- | --- |
-| 1.0.1 | Yes |
-| Older versions | No |
+| 1.1.4 | Yes |
+| Earlier versions | No |
 
-## Reporting a security issue
+Users should reproduce a suspected issue on Kingdom 1.1.4 before reporting it
+when it is safe to do so.
 
-Please do **not** open a public GitHub Issue for vulnerabilities that could put users at risk.
+## Reporting a vulnerability
 
-If you believe you have found a security problem in Kingdom, contact the project owner privately through the official Kingdom project channels and include:
+Do not disclose a suspected vulnerability, exploit, sensitive log, or proof of
+concept in a public issue.
 
-- the Kingdom version affected;
-- your Windows version;
-- a clear description of the issue;
-- steps to reproduce it;
-- the potential impact;
-- screenshots or logs when useful.
+Report it privately to `pingusama.info@gmail.com`. Use a subject that clearly
+identifies the message as a Kingdom security report.
 
-Please avoid including personal information, credentials, copyrighted game files, or links to unauthorized downloads.
+Include, where relevant:
 
-## Scope
+- the Kingdom version;
+- the Windows version;
+- a concise description of the issue;
+- reproducible steps;
+- the expected and observed result;
+- the potential security impact;
+- affected paths or operations;
+- minimal screenshots or logs with sensitive data removed.
 
-Examples of issues that may be security-relevant include:
+Do not include personal data, credentials, access tokens, copyrighted game
+files, private keys, or unauthorized content or links.
 
-- unsafe file deletion or path handling;
-- unintended execution of files outside the selected game or repack folders;
-- privilege-elevation behavior that could be abused;
-- insecure handling of configuration data;
-- behavior that could allow arbitrary command execution through Kingdom.
+## Security scope
 
-Normal application bugs, UI problems, failed game detection, cover issues, or feature requests should be reported through the regular GitHub Issues templates instead.
+Examples of security-relevant reports include:
+
+- unsafe deletion or path-validation behavior;
+- unintended execution of an external file;
+- privilege or elevation abuse;
+- arbitrary command execution;
+- archive traversal, unsafe links, or extraction outside the intended folder;
+- insecure handling of configuration or local application data;
+- operations that could unexpectedly overwrite or disclose user files.
+
+Normal bugs, compatibility problems, usability feedback, and feature requests
+belong in the project's standard issue tracker and should follow
+[SUPPORT.md](SUPPORT.md).
 
 ## Responsible disclosure
 
-Please allow reasonable time for investigation and remediation before publicly disclosing a confirmed vulnerability.
+Allow reasonable time for triage and remediation before public disclosure.
+Avoid accessing data that is not your own, causing service disruption, or
+performing destructive tests. Test only on systems and files that you own or
+are authorized to use.
 
-Kingdom is a closed-source project, but useful and responsibly reported security findings are welcome and appreciated.
+Submitting a report does not grant permission to violate law, access another
+person's data, or test systems without authorization.
+
+## Privacy of reports
+
+Kingdom is designed as a local offline utility, but a report may still contain
+personal paths, usernames, game-library information, or other sensitive local
+details. Redact those details before sending a report and provide only the
+minimum information needed to reproduce the issue.
+
+## License boundary
+
+Kingdom's proprietary license does not restrict reverse engineering,
+decompilation, disassembly, replacement, relinking, modification, or debugging
+to the extent necessary to exercise rights granted by an applicable
+third-party license, including the GNU LGPL, or rights that cannot lawfully be
+waived. See the canonical Kingdom license for the complete terms.

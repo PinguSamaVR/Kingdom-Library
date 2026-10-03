@@ -1,0 +1,18 @@
+PYSIDE6 AND SHIBOKEN6 6.11.2 NOTICE
+
+Kingdom distributes PySide6 6.11.2, PySide6 Essentials 6.11.2, and Shiboken6
+6.11.2 as dynamically loaded Python bindings for Qt.
+
+Qt for Python is offered by The Qt Company under the GNU Lesser General Public
+License version 3 and GNU General Public License version 3, with commercial
+licensing alternatives available from the rights holder. Kingdom relies on
+the LGPL option for the distributed binding libraries. See LGPL-3.0.txt and
+GPL-3.0.txt.
+
+The bindings are separate PYD/DLL files and may be replaced with compatible
+user-built versions. See ../BUILDING-AND-RELINKING.txt and
+../OPEN-SOURCE-SOURCE-AVAILABILITY.txt.
+
+Upstream project and source release:
+https://doc.qt.io/qtforpython-6/licenses.html
+https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/

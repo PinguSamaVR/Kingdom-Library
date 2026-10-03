@@ -1,0 +1,52 @@
+KINGDOM 1.1.4 - THIRD-PARTY NOTICES
+
+Kingdom includes third-party components. Those components are licensed by
+their respective copyright holders under the terms identified below. Nothing
+in the Kingdom proprietary license limits rights granted by these licenses.
+
+Principal runtime components
+
+- CPython 3.14.4 — Python Software Foundation License Version 2 and included
+  third-party terms. See LICENSES/CPython-3.14.4-LICENSE.txt,
+  LICENSES/CPython-3.14.4-THIRD-PARTY-NOTICES.txt, and the accompanying SPDX
+  document.
+- PySide6 6.11.2, PySide6 Essentials 6.11.2, and Shiboken6 6.11.2 — GNU LGPL
+  version 3, with GPL/commercial alternatives where offered by the rights
+  holder. See LICENSES/LGPL-3.0.txt and the Qt for Python notices.
+- Qt 6.11.2 modules Core, GUI, Widgets, SVG, and Image Formats — GNU LGPL
+  version 3, with GPL/commercial alternatives where offered by the rights
+  holder. See LICENSES/LGPL-3.0.txt and the Qt notices.
+- psutil 7.2.2 — BSD 3-Clause. See its dedicated license file.
+- PyInstaller 6.22.2 — GPL version 2 or later with a special exception that
+  permits distributing bundled applications. See its dedicated COPYING file.
+- 7-Zip 26.03 command-line tools — LGPL 2.1 or later, with additional terms
+  for portions described by 7-Zip. The complete upstream notice is distributed
+  inside the runtime at tools/7zip/License.txt.
+- OpenSSL 3.0.19 — Apache License 2.0. See its dedicated license file.
+- libffi 3.4.4 — permissive MIT-style license. See its dedicated license file.
+- Fugaz One 1.002 — SIL Open Font License 1.1. See its dedicated license file.
+- Microsoft Visual C++ runtime components — Microsoft redistributable runtime
+  components, distributed under Microsoft's applicable terms.
+- Mesa llvmpipe software renderer bundled with Qt 6.11.2 — MIT and Boost
+  Software License 1.0 components. The standalone Mesa sub-version is not
+  exposed by the delivered binary; the binary is identified by the release
+  payload manifest and hashes.
+
+CPython native dependencies included in this Windows build include bzip2
+1.0.8, XZ/liblzma 5.2.5, libffi 3.4.4, mpdecimal 4.0.0, OpenSSL 3.0.19,
+zlib-ng 2.2.4, and zstd 1.5.7. Their applicable terms are reproduced or
+identified in the LICENSES directory and CPython notices.
+
+Qt incorporates additional third-party code. The release-specific inventory,
+versions, and license mappings are in
+LICENSES/Qt-6.11.2-THIRD-PARTY-NOTICES.txt. The common license texts referenced
+there are included in LICENSES.
+
+No Qt Virtual Keyboard, Qt Network, Qt PDF/PDFium, Qt Declarative/QML/Quick,
+or Qt WebEngine payload is included in Kingdom 1.1.4.
+
+Source availability and replacement rights for copyleft-covered components
+are described in OPEN-SOURCE-SOURCE-AVAILABILITY.txt and
+BUILDING-AND-RELINKING.txt.
+
+This notice is informational. The complete license texts control.

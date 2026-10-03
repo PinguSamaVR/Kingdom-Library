@@ -1,0 +1,23 @@
+KINGDOM 1.1.4 - OPEN-SOURCE SOURCE AVAILABILITY
+
+The corresponding-source package for copyleft-covered third-party components
+distributed with Kingdom 1.1.4 is available as follows:
+
+File: Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip
+SHA-256: 98E79FE019F5003881B4ECD214B7FA831B4E7CD069A19F66744900ED813FBD45
+Size: 81600356 bytes
+Release page: https://pingusama.itch.io/kingdom-library
+
+The corresponding-source package is distributed alongside Kingdom 1.1.4 on
+that release page.
+
+The package contains the exact unmodified upstream source archives for the
+covered components, applicable licenses and notices, a component inventory,
+PATCHES-NONE.txt, and BUILDING-AND-RELINKING.txt.
+
+This source package concerns third-party components only. Kingdom's original
+application code, branding, documentation, and proprietary assets are not
+open source and are not included.
+
+For source-availability or compliance questions, contact
+pingusama.info@gmail.com.

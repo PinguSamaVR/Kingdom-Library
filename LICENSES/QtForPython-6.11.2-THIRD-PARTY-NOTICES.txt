@@ -1,0 +1,17 @@
+QT FOR PYTHON 6.11.2 - SOURCE AND THIRD-PARTY IDENTIFICATION
+
+The PySide6 and Shiboken6 binaries distributed by Kingdom are from Qt for
+Python 6.11.2. Their primary open-source license option is LGPL version 3;
+GPL version 3 and commercial alternatives are also offered upstream.
+
+Exact upstream corresponding source archive included in the Kingdom 1.1.4
+corresponding-source package:
+
+pyside-setup-everywhere-src-6.11.2.zip
+SHA-256: c0fdd62b91a1d36d5ee2e1fb71050a32fbc93fcdeef0fdcb41d29afaaf00d9b5
+Size: 23134400 bytes
+
+Official release directory:
+https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/
+
+No Kingdom-specific source patch was applied. See ../PATCHES-NONE.txt.

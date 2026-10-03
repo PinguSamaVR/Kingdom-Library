@@ -1,0 +1,24 @@
+CPYTHON 3.14.4 WINDOWS RUNTIME - THIRD-PARTY NOTICE
+
+Kingdom distributes CPython 3.14.4 and selected extension modules. The
+controlling CPython license and notices are in CPython-3.14.4-LICENSE.txt.
+
+The official CPython 3.14.4 Windows build metadata identifies these native
+dependency versions used by the corresponding extension modules present in
+Kingdom's runtime:
+
+- bzip2/libbzip2 1.0.8 — terms reproduced in the CPython license.
+- XZ/liblzma 5.2.5 — see XZ-5.2.5-COPYING.txt.
+- libffi 3.4.4 — see libffi-3.4.4-LICENSE.txt and the CPython license.
+- mpdecimal/libmpdec 4.0.0 — terms reproduced in the CPython license.
+- OpenSSL 3.0.19 — see OpenSSL-3.0.19-LICENSE.txt.
+- zlib-ng 2.2.4 — see zlib-ng-2.2.4-LICENSE.txt and Zlib.txt.
+- zstd 1.5.7 — see zstd-1.5.7-LICENSE.txt.
+
+SQLite support is not present in the qualified Kingdom payload. Expat is used
+by the CPython standard library implementation and its terms are included in
+CPython-3.14.4-LICENSE.txt; no separate expat extension module is distributed.
+
+Source/version evidence:
+https://github.com/python/cpython/blob/v3.14.4/PCbuild/python.props
+https://github.com/python/cpython/blob/v3.14.4/LICENSE

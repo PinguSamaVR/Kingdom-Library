@@ -1,0 +1,12 @@
+KINGDOM 1.1.4 - UPSTREAM PATCH STATEMENT
+
+No source-code patches were applied to the LGPL- or GPL-covered upstream
+components distributed with Kingdom 1.1.4.
+
+The delivered PySide6, Shiboken6, Qt libraries, Qt plugins, and 7-Zip tools are
+unmodified upstream binaries selected and packaged with Kingdom. This was
+verified by payload hashes and byte comparisons against the qualified package
+origins recorded in the build provenance. No patch file or patched source tree
+participated in the Platinum build. Packaging, file selection, and
+deterministic PE/archive metadata normalization are not source-code patches to
+those components.

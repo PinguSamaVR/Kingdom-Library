@@ -1,89 +1,157 @@
-# Kingdom Proprietary License
+KINGDOM PROPRIETARY LICENSE
 
-Copyright © 2026 PinguSama. All rights reserved.
+Copyright (c) 2026 PinguSama. All rights reserved.
 
-This license applies to the Kingdom software distributed through this repository and any official Kingdom distribution channel.
+1. Scope
 
-## 1. Permission to use
+This license applies to the original Kingdom application code, original
+Kingdom documentation, original visual and audio assets, and the Kingdom and
+PinguSama names, logos, and branding elements included with Kingdom
+(collectively, the "Kingdom Proprietary Materials").
 
-You are granted a limited, non-exclusive, non-transferable, revocable license to download, install, and use Kingdom for personal, lawful purposes.
+This license does not apply to third-party software, libraries, fonts, tools,
+assets, or other materials included with, used by, or distributed alongside
+Kingdom (collectively, "Third-Party Materials"). Third-Party Materials remain
+the property of their respective owners and are governed by their respective
+licenses and notices.
 
-You may keep reasonable backup copies of the official unmodified Kingdom distribution for your own use.
+2. End-User License Grant
 
-## 2. Free non-commercial sharing
+Subject to this license, PinguSama grants you a limited, non-exclusive,
+non-transferable, non-sublicensable license to install and use the Kingdom
+Proprietary Materials for personal, lawful, non-commercial purposes on devices
+that you own or control.
 
-You may share and redistribute Kingdom free of charge to friends, family, or other users, provided that:
+You may make a reasonable number of backup copies of the complete, official,
+unmodified Kingdom distribution for your own use.
 
-- the software is distributed completely free of charge;
-- the official Kingdom distribution remains unmodified;
-- all original files, notices, branding, and license information remain intact;
-- you do not claim authorship, ownership, sponsorship, or official affiliation;
-- you do not bundle Kingdom with malware, adware, unauthorized third-party software, or misleading installers;
-- you do not use redistribution as part of a paid product, service, subscription, or other commercial activity.
+No ownership interest in the Kingdom Proprietary Materials is transferred to
+you.
 
-Where practical, sharing the official Kingdom download page is encouraged so recipients can obtain the latest authentic release.
+3. Free Non-Commercial Redistribution
 
-## 3. Restrictions
+You may redistribute the complete, official, unmodified Kingdom distribution
+without charge, provided that:
 
-Except for the free non-commercial sharing expressly allowed above, or where expressly permitted by applicable law or with prior written permission from the copyright holder, you may not:
+  a. the distribution remains complete and unmodified;
+  b. this license and all applicable third-party license and notice files are
+     included unchanged;
+  c. all copyright, attribution, branding, and legal notices are preserved;
+  d. you do not claim authorship, sponsorship, endorsement, or affiliation;
+  e. you do not include Kingdom in malware, adware, deceptive installers, or
+     unwanted software bundles; and
+  f. you do not sell Kingdom, charge for access to it, or include it as a paid
+     feature of a product, service, subscription, or commercial bundle.
 
-- sell, rent, lease, sublicense, commercially exploit, or charge any fee for Kingdom;
-- modify, adapt, translate, alter, patch, or create derivative works based on Kingdom;
-- reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code or internal implementation of Kingdom;
-- remove, alter, or obscure copyright, attribution, branding, license, or proprietary notices;
-- represent Kingdom as your own work or imply endorsement, sponsorship, or affiliation that does not exist;
-- use Kingdom in a way that violates applicable law or the rights of third parties.
+This permission does not authorize redistribution of Third-Party Materials
+except as permitted by their respective licenses.
 
-## 4. Source code
+4. Restrictions on the Kingdom Proprietary Materials
 
-Kingdom is a closed-source proprietary project.
+Except where this license, an applicable Third-Party License, or mandatory law
+expressly permits otherwise, you may not:
 
-The source code is not licensed or distributed under this repository. Access to compiled binaries does not grant any right to the source code or to reproduce the software's internal implementation.
+  a. sell, rent, lease, sublicense, or commercially exploit the Kingdom
+     Proprietary Materials;
+  b. modify, adapt, translate, patch, or create derivative works from the
+     Kingdom Proprietary Materials;
+  c. reverse engineer, decompile, disassemble, or otherwise attempt to derive
+     source code from the Kingdom Proprietary Materials;
+  d. remove, conceal, or alter copyright, attribution, branding, or legal
+     notices; or
+  e. use Kingdom for unlawful purposes or to infringe the rights of others.
 
-## 5. No included third-party content
+5. Third-Party Materials and License Priority
 
-Kingdom is a local library and game-management utility.
+Third-Party Materials are licensed directly under their respective license
+terms. Nothing in this license claims ownership of Third-Party Materials or
+reduces, replaces, conditions, or restricts rights granted directly by an
+applicable third-party license.
 
-Kingdom does not provide games, repacks, download sources, cracks, DRM-bypass tools, piracy links, or other unauthorized third-party content.
+If a term of this license conflicts with a license governing a Third-Party
+Material, the third-party license controls for that Third-Party Material.
 
-Users are responsible for ensuring that any files, games, software, or other content managed through Kingdom have been obtained and are used lawfully.
+In particular, the restrictions in Section 4 do not prohibit copying,
+modifying, replacing, relinking, debugging, reverse engineering, decompiling,
+or disassembling when and only to the extent necessary to exercise rights
+granted by the GNU Lesser General Public License, the GNU General Public
+License, another applicable third-party license, or mandatory law. This
+includes the right, where applicable, to modify an LGPL-covered library used
+by Kingdom and to reverse engineer or debug Kingdom solely as necessary to
+debug those modifications.
 
-Kingdom does not grant any license or rights to third-party games, artwork, trademarks, logos, or other intellectual property.
+PinguSama is not required to provide warranty, maintenance, or support for a
+copy of Kingdom that has been modified or used with replaced third-party
+components, except to the extent required by mandatory law or an applicable
+third-party license.
 
-## 6. Updates and availability
+The availability of source code or relinking materials for a Third-Party
+Material does not make the Kingdom Proprietary Materials open source and does
+not grant access to Kingdom's proprietary source code.
 
-The copyright holder may modify, update, replace, discontinue, or change Kingdom and its distribution at any time.
+6. Intellectual Property and Branding
 
-No guarantee is made that future versions, updates, or support will remain available indefinitely.
+The Kingdom Proprietary Materials are owned by PinguSama and are protected by
+applicable intellectual-property laws. Kingdom and PinguSama names, logos, and
+distinctive branding may be displayed as part of an authorized, unmodified
+copy of Kingdom. No separate right is granted to use those names, logos, or
+branding to identify another product or service or to imply endorsement,
+sponsorship, or affiliation.
 
-## 7. Disclaimer of warranty
+7. Third-Party Content and User-Supplied Files
 
-To the maximum extent permitted by applicable law, Kingdom is provided **"AS IS"** and **"AS AVAILABLE"**, without warranties of any kind, whether express or implied.
+Kingdom is a local library-management utility. Kingdom does not include or
+grant rights in games, repacks, cracks, updates, save data, installers, or any
+other content supplied by users or third parties. You are responsible for
+ensuring that you have the right to possess and use files that you manage with
+Kingdom.
 
-No warranty is made that Kingdom will be error-free, uninterrupted, compatible with every system, or suitable for any particular purpose.
+8. Updates, Availability, and Discontinuation
 
-You are responsible for maintaining appropriate backups of your files and data before using software-management, uninstall, deletion, or reset functions.
+PinguSama may update, change, suspend, or discontinue Kingdom. This section
+does not limit obligations that cannot lawfully be excluded and does not
+affect rights granted directly under third-party licenses.
 
-## 8. Limitation of liability
+9. Termination
 
-To the maximum extent permitted by applicable law, the copyright holder shall not be liable for any direct, indirect, incidental, special, consequential, or other damages arising from the use or inability to use Kingdom, including but not limited to loss of data, loss of software, loss of profits, system damage, or interruption of service.
+Your license to the Kingdom Proprietary Materials terminates if you materially
+breach this license. Upon termination, you must stop using and distributing
+the Kingdom Proprietary Materials and delete copies in your possession or
+control, except to the extent that retention is permitted by mandatory law.
 
-Nothing in this license excludes or limits liability where such exclusion or limitation is prohibited by applicable law.
+Termination of this license does not terminate, reduce, or otherwise affect
+rights granted directly under a third-party license for Third-Party Materials.
 
-## 9. Termination
+10. Disclaimer of Warranty
 
-Your permission to use Kingdom automatically terminates if you materially violate this license.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE KINGDOM PROPRIETARY
+MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY
+KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT.
 
-Upon termination, you must stop using Kingdom and delete copies in your possession, except where retention is required by applicable law.
+11. Limitation of Liability
 
-## 10. Reservation of rights
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PINGUSAMA WILL NOT BE LIABLE
+FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE, BUSINESS, OR USE, ARISING FROM
+OR RELATED TO KINGDOM, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-All rights not expressly granted in this license are reserved by the copyright holder.
+Nothing in this license excludes or limits liability where exclusion or
+limitation is prohibited by applicable law.
 
-No ownership rights are transferred to the user.
+12. Non-Waivable Rights
 
----
+Nothing in this license excludes, waives, or limits consumer rights, statutory
+warranties, remedies, or other rights that cannot lawfully be excluded,
+waived, or limited. Any restriction in this license applies only to the extent
+permitted by applicable law.
 
-**Kingdom — Your library, your rules.**
+13. Severability and Reservation of Rights
 
-For permissions beyond this license, contact the copyright holder through the official Kingdom project channels.
+If a provision of this license is held unenforceable, it will be applied to
+the maximum extent permitted, and the remaining provisions will remain in
+effect to the extent allowed by law.
+
+All rights in the Kingdom Proprietary Materials not expressly granted by this
+license are reserved by PinguSama.

@@ -1,0 +1,127 @@
+QT 6.11.2 - DISTRIBUTED MODULES AND INCORPORATED THIRD-PARTY CODE
+
+Kingdom distributes selected dynamically loaded Qt 6.11.2 libraries and
+plugins from Qt Core, Qt GUI, Qt Widgets, Qt SVG, and Qt Image Formats. These
+Qt modules are offered under LGPL version 3, GPL alternatives, and commercial
+licenses. Kingdom relies on the LGPL option. See LGPL-3.0.txt.
+
+The following release-specific map is derived from Qt's official 6.11.2
+third-party inventory. Common license texts are included in this directory.
+
+Qt Core incorporated code
+
+- Apache Tika MIME type definitions, commit c2972478 — Apache-2.0.
+- BLAKE2 reference source, commit ed1974ea — CC0-1.0.
+- zlib 1.3.2 — Zlib.
+- Easing equations — BSD-3-Clause.
+- double-conversion 3.4.0 — BSD-3-Clause.
+- forkfd — MIT.
+- MD4 and MD5 implementations — public domain.
+- PCRE2 10.47 — BSD-3-Clause plus PCRE2 Binary Packages Exception.
+- SHA-1 implementation — public domain.
+- SHA-3/Keccak 3.2 and related endian helper 1.0.0 — CC0/public-domain terms.
+- SHA-384/SHA-512 implementation — BSD-style/public-domain terms.
+- SipHash reference implementation — CC0-1.0.
+- TinyCBOR 7.0 — MIT.
+- tl::expected — CC0-1.0.
+- Unicode Character Database 36 and CLDR 48.2 — Unicode-3.0.
+
+Qt GUI incorporated code
+
+- Adobe Glyph List 1.7 — BSD-3-Clause.
+- Anti-aliased polygon rasterizer — permissive notice reproduced upstream.
+- D3D12 Memory Allocator, commit f128d9b — MIT.
+- FreeType 2.14.3 and incorporated BDF/PCF/zlib code — FTL, MIT, and Zlib.
+- HarfBuzz 14.3.0 — MIT.
+- ICC profile data — ICC-License.
+- libjpeg-turbo 3.2.0 — BSD-3-Clause, IJG, and Zlib.
+- libpng 1.6.58 — Libpng and Libpng-2.0.
+- MD4C 0.5.3 — MIT.
+- Mipmap generator — MIT.
+- OpenGL and Khronos headers — MIT-Khronos-old and MIT.
+- Smooth-scaling code — BSD-2-Clause and Imlib2.
+- Vulkan Registry 1.4.308 — Apache-2.0 and MIT.
+- Vulkan Memory Allocator 3.2.1 — MIT.
+- X server helper code — X11/MIT-Open-Group.
+
+Qt Image Formats incorporated code
+
+- libtiff 4.7.2 — libtiff license.
+- libwebp 1.6.0 — BSD-3-Clause.
+
+Qt SVG incorporated code
+
+- XSVG — HPND sell variant.
+
+Software renderer
+
+- Mesa llvmpipe distributed by the Qt 6.11.2 Windows package — MIT and Boost
+  Software License 1.0. The standalone Mesa sub-version is not exposed by the
+  delivered binary; the exact binary is identified by Kingdom's release hash
+  manifest.
+
+Copyright and attribution notices
+
+- Apache Tika MIME: Copyright 2026 The Apache Software Foundation.
+- BLAKE2: Copyright 2012 Samuel Neves.
+- zlib: Copyright 1995-2026 Jean-loup Gailly and Mark Adler.
+- Easing equations: Copyright 2001 Robert Penner.
+- double-conversion: Copyright 2006-2012 the V8 project authors.
+- forkfd: Copyright 2016 Intel Corporation; Copyright 2015 Klarälvdalens
+  Datakonsult AB, a KDAB Group company.
+- PCRE2: Copyright 1997-2007 University of Cambridge; Copyright 2007-2024
+  Philip Hazel; Copyright 2010-2024 Zoltan Herczeg. SLJIT: Copyright Zoltan
+  Herczeg.
+- SHA-1: Copyright Dominik Reichl; Copyright 2016 The Qt Company Ltd.
+- SHA-3 brg_endian: Copyright 1998-2013 Brian Gladman.
+- SHA-3 Keccak: Guido Bertoni, Joan Daemen, Michael Peeters, and Gilles Van
+  Assche; dedicated to the public domain to the extent possible.
+- SHA-384/SHA-512: Copyright 2011 IETF Trust and the identified authors.
+- SipHash: Copyright 2012-2014 Jean-Philippe Aumasson and Daniel J. Bernstein;
+  Copyright 2016 Intel Corporation.
+- TinyCBOR: Copyright 2015-2025 Intel Corporation.
+- tl::expected: Sy Brand; dedicated to the public domain to the extent possible.
+- Unicode UCD: Copyright 1991-2025 Unicode, Inc. CLDR: Copyright 2004-2025
+  Unicode, Inc.
+- Adobe Glyph List: Copyright 2002, 2003, 2005, 2006, 2008, 2010, 2015 Adobe
+  Systems.
+- FreeType and rasterizer: Copyright 1996-2026 David Turner, Robert Wilhelm,
+  Werner Lemberg, and the FreeType contributors identified by the upstream
+  notice. BDF support also carries Copyright 2000 Computing Research Labs,
+  New Mexico State University and Copyright 2001-2014 Francesco Zappa Nardelli.
+  PCF support also carries Copyright 1990, 1994, 1998 The Open Group.
+- HarfBuzz: Copyright 1998-2023 its contributors, including Google, Ebrahim
+  Byagowi, Facebook, Mozilla Foundation, Codethink, Nokia, Keith Stribley,
+  Martin Hosken and SIL International, Chris Wilson, Behdad Esfahbod, Red Hat,
+  David Turner, Werner Lemberg, Igalia, Matthias Clasen, Khaled Hosny, Adobe,
+  and Alexei Podtelezhnikov, as detailed by the upstream notice.
+- libpng: Copyright 1995-2026 The PNG Reference Library Authors and the
+  additional contributors named in Libpng.txt and Libpng-2.0.txt.
+- MD4: written by Alexander Peslyak in 2001 and placed in the public domain.
+  MD5: written by Colin Plumb in 1993; no copyright claimed.
+- MD4C: Copyright 2016-2024 Martin Mitáš.
+- D3D12 Memory Allocator: Copyright 2019-2022 Advanced Micro Devices, Inc.
+- Mipmap generator for D3D12: Copyright 2015 Microsoft.
+- OpenGL headers: Copyright 2013-2014 The Khronos Group Inc.
+- Vulkan registry: Copyright 2015-2025 The Khronos Group Inc.
+- Vulkan Memory Allocator: Copyright 2017-2025 Advanced Micro Devices, Inc.
+- Smooth scaling: Copyright 2004-2005 Daniel M. Duley; Carsten Haitzler and
+  contributors; Willem Monsuwe.
+- X server helper: Copyright 1987-1988 X Consortium and Digital Equipment
+  Corporation.
+- ICC profile: Copyright International Color Consortium, 2015.
+- libtiff: Copyright 1988-1997 Sam Leffler; Copyright 1991-1997 Silicon
+  Graphics, Inc.
+- libwebp: Copyright 2010 Google Inc.
+- XSVG: Copyright 2002 USC/Information Sciences Institute.
+
+The controlling files in this directory preserve the complete license terms.
+Full contributor strings and source-file-level notices remain in the exact
+upstream source archives designated for the corresponding-source package.
+
+Authoritative upstream inventory:
+https://doc.qt.io/qt-6.11/licenses-used-in-qt.html
+
+Corresponding source archives are identified in
+../OPEN-SOURCE-SOURCE-AVAILABILITY.txt. No Qt Virtual Keyboard, Qt Network,
+Qt PDF/PDFium, Qt Declarative/QML/Quick, or Qt WebEngine payload is included.

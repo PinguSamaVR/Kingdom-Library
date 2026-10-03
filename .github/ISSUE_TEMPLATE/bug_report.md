@@ -8,7 +8,7 @@ assignees: ""
 
 ## Kingdom version
 
-Example: 1.0.1
+Enter the exact version shown by Kingdom (for example: 1.1.4).
 
 ## Windows version
 

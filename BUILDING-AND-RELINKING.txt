@@ -1,0 +1,50 @@
+KINGDOM 1.1.4 - BUILDING, REPLACEMENT, AND RELINKING INFORMATION
+
+Kingdom is distributed as a Windows x64 ONEDIR application. LGPL-covered Qt,
+PySide6, and Shiboken6 libraries are separate DLL or PYD files in the release,
+principally below the PySide6 and shiboken6 directories. They are dynamically
+loaded at runtime and are not statically linked into Kingdom.exe.
+
+Obtaining matching source
+
+Use the source package identified in OPEN-SOURCE-SOURCE-AVAILABILITY.txt. It
+contains the exact unmodified upstream source archives for the copyleft-
+covered components in the release, their licenses and notices, and this file.
+PATCHES-NONE.txt confirms that no upstream source patches were applied.
+
+Building replacement libraries
+
+1. Use a Windows x64 build environment compatible with CPython 3.14.4 and its
+   MSC v.1944 (MSVC 19.44 / Visual C++ 14.4x) ABI. The upstream Qt for Python
+   instructions for Qt 6.11.2 remain authoritative for required build tools.
+2. Build Qt 6.11.2 from the included qtbase, qtsvg, qtimageformats, and
+   qttranslations sources. Build the modules actually listed in COMPONENTS.txt.
+3. Build PySide6 and Shiboken6 6.11.2 from the included Qt for Python source,
+   targeting the replacement Qt 6.11.2 build and CPython 3.14.
+4. Follow each upstream project's build instructions. Kingdom does not impose
+   a signing, encryption, DRM, or integrity-check requirement on replacement
+   LGPL libraries.
+
+PyInstaller 6.22.2 produced the ONEDIR wrapper, but rebuilding Kingdom.exe is
+not required to replace the separate LGPL libraries described here.
+
+Replacing and testing
+
+1. Work on a copy of the complete Kingdom distribution.
+2. Preserve file names, directory layout, architecture, and compatible ABI.
+3. Replace the corresponding Qt DLLs, Qt plugins, PySide6 PYD files, and/or
+   Shiboken6 files with your compatible builds.
+4. Start Kingdom from the copied distribution and test the relevant UI,
+   library, archive, and file-dialog workflows.
+
+The same principle applies to the separately distributed 7-Zip command-line
+tools under tools/7zip: compatible rebuilt executables may replace the
+corresponding files while preserving the paths and command-line behavior used
+by Kingdom.
+
+Kingdom's proprietary source code is not required to replace these dynamically
+loaded libraries and tools. The Kingdom license expressly preserves the right
+to reverse engineer or debug Kingdom solely to the extent necessary to debug
+modifications to, or replacement of, an LGPL-covered component. Modified
+third-party components are not warranted or supported by PinguSama, except
+where mandatory law or the applicable third-party license requires otherwise.

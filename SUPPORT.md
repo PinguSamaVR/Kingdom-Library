@@ -1,59 +1,74 @@
 # Kingdom Support
 
-Thanks for using Kingdom.
+This document covers normal support requests for the current public release,
+**Kingdom 1.1.4**.
 
-## Before asking for help
+Before requesting help:
 
-Please make sure you are using the latest public version of Kingdom and review the main README first.
+1. confirm that you are using the complete official release;
+2. review [README.md](README.md);
+3. reproduce the issue on Kingdom 1.1.4 when it is safe to do so; and
+4. remove personal data, credentials, copyrighted game files, and unauthorized
+   links from screenshots and logs.
 
-Many common problems are related to folder configuration, installed-game detection, Windows permissions, or keeping the release folder intact.
+## Where to request support
 
-## Where to ask for help
+Use the public Kingdom GitHub issue tracker for:
 
-Use GitHub Issues for:
-
-- reproducible bugs;
-- installation or launch problems related to Kingdom itself;
+- reproducible application bugs;
+- installation or launch problems;
 - unexpected behavior;
-- feature requests;
+- compatibility reports;
+- feature requests; and
 - usability feedback.
 
-Please use the appropriate Issue template whenever possible.
+Only channels linked from the official Kingdom repository or official Kingdom
+project pages should be treated as official. Privacy, compliance, and private
+security correspondence may be sent to `pingusama.info@gmail.com`.
 
-## What to include in a bug report
+## What to include
 
-A useful report should include:
+Provide:
 
 - Kingdom version;
 - Windows version;
 - what you were trying to do;
-- what happened;
-- what you expected to happen;
+- what you expected;
+- what happened instead;
 - clear reproduction steps;
-- screenshots when helpful.
-
-If the issue concerns game detection or folders, describe the relevant folder structure without sharing copyrighted files.
-
-## What Kingdom support does not cover
-
-Kingdom support does not provide assistance with:
-
-- obtaining games or repacks;
-- cracks or DRM bypass;
-- piracy sources or download links;
-- troubleshooting third-party installers beyond Kingdom's interaction with them;
-- modifying copyrighted game files.
-
-Kingdom is intended only as a local library and file-management utility for software obtained and used lawfully.
+- relevant, redacted screenshots or logs; and
+- a description of the relevant folder structure without uploading
+  copyrighted or private files.
 
 ## Security issues
 
-Do not report potentially exploitable security vulnerabilities in a public Issue. Please follow the instructions in `SECURITY.md` instead.
+Do not report vulnerabilities or exploit details in a public issue. Follow
+[SECURITY.md](SECURITY.md) and use an official private Kingdom channel that is
+available and verified at the time of reporting.
 
-## Other channels
+## Support boundaries
 
-The official Kingdom project page is available at:
+Support does not cover:
 
-https://pingusama.itch.io/kingdom-library
+- obtaining games, repacks, cracks, DRM bypasses, or unauthorized downloads;
+- links to infringing or unlawful content;
+- instructions for modifying protected game files without authorization;
+- defects inside a third-party game, installer, updater, archive tool, or
+  distribution platform that Kingdom does not control; or
+- systems and files that the requester is not authorized to use.
 
-For general feedback, you can also use the official Kingdom project channels maintained by PinguSama.
+Kingdom may help identify where its own workflow stopped, but it cannot promise
+support for every third-party installer, updater, archive, game, or user-made
+folder layout.
+
+## Privacy
+
+Kingdom support reports may reveal local usernames, folder paths, library
+contents, or save locations. Redact them whenever they are not necessary.
+Share the minimum data required to understand the problem.
+
+## Response and maintenance
+
+Kingdom is independently maintained. Response times and the availability of
+updates are not guaranteed. Support for older releases may end when a newer
+public version becomes available.
