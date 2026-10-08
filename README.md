@@ -17,6 +17,10 @@ service to manage the local library.
 - **GitHub Releases:** https://github.com/PinguSamaVR/Kingdom-Library/releases
 - **itch.io:** https://pingusama.itch.io/kingdom-library
 
+**To download and run Kingdom on Windows, choose `Kingdom.by.PinguSama.v1.1.4.zip` from the [latest GitHub release](https://github.com/PinguSamaVR/Kingdom-Library/releases/latest).**
+
+The separate `Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip` contains upstream third-party source code and licensing/compliance materials. **It is not the application and is not needed to run Kingdom.** `SHA256SUMS.txt` is provided for optional file-integrity verification.
+
 Download the complete Windows release and keep all bundled files together.
 The corresponding sources required for covered third-party components are
 published separately from the proprietary Kingdom application as a release
