@@ -14,17 +14,38 @@ service to manage the local library.
 
 ## Download
 
-- **GitHub Releases:** https://github.com/PinguSamaVR/Kingdom-Library/releases
+- **GitHub Release 1.1.4:** https://github.com/PinguSamaVR/Kingdom-Library/releases/tag/v1.1.4
 - **itch.io:** https://pingusama.itch.io/kingdom-library
 
-**To download and run Kingdom on Windows, choose `Kingdom.by.PinguSama.v1.1.4.zip` from the [latest GitHub release](https://github.com/PinguSamaVR/Kingdom-Library/releases/latest).**
+### Download 1 — Kingdom for Windows
 
-The separate `Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip` contains upstream third-party source code and licensing/compliance materials. **It is not the application and is not needed to run Kingdom.** `SHA256SUMS.txt` is provided for optional file-integrity verification.
+[Kingdom.by.PinguSama.v1.1.4.zip](https://github.com/PinguSamaVR/Kingdom-Library/releases/download/v1.1.4/Kingdom.by.PinguSama.v1.1.4.zip)
 
-Download the complete Windows release and keep all bundled files together.
-The corresponding sources required for covered third-party components are
-published separately from the proprietary Kingdom application as a release
-asset and alongside the itch.io distribution.
+This is the application ZIP to download for normal use of Kingdom on Windows.
+Extract the complete release and keep all bundled files together.
+
+SHA-256: `541771A0192DBB5934C9D84E7E6B7141D715B6ED66065217974FC8C919F0802C`
+
+### Download 2 — Technical Materials (NOT THE APP)
+
+[Kingdom-Technical-Materials-NOT-THE-APP.zip](https://github.com/PinguSamaVR/Kingdom-Library/releases/download/v1.1.4/Kingdom-Technical-Materials-NOT-THE-APP.zip)
+
+This separate archive contains third-party corresponding sources, license
+texts, notices, compliance documentation and the release-bound LGPL
+recombination kit. **It is not the application and is not needed for normal
+use of Kingdom.** Start with `START-HERE.txt` inside the archive.
+
+SHA-256: `238F4E59B5969E4D31929DA5A3096579E729E7BC659563ECE36FD04D52466CAC`
+
+Kingdom remains proprietary and closed-source; these technical materials do
+not contain Kingdom's proprietary source code. Their publication does not
+certify global legal LGPL compliance. Recombined copies are distinct from
+the official distribution and are not guaranteed to retain its signature,
+Store identity or official updates.
+
+Use `SHA256SUMS.txt` from this release to verify the two official ZIP downloads.
+GitHub's automatic **Source code (zip/tar.gz)** snapshots are not the official
+Kingdom application downloads.
 
 ## Main features
 
