@@ -35,7 +35,7 @@ texts, notices, compliance documentation and the release-bound LGPL
 recombination kit. **It is not the application and is not needed for normal
 use of Kingdom.** Start with `START-HERE.txt` inside the archive.
 
-SHA-256: `238F4E59B5969E4D31929DA5A3096579E729E7BC659563ECE36FD04D52466CAC`
+SHA-256: `7CD56C741E169B7E446085E651C1296003134808C64F2881C6EA8973CD11DBE3`
 
 Kingdom remains proprietary and closed-source; these technical materials do
 not contain Kingdom's proprietary source code. Their publication does not

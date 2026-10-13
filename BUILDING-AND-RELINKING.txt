@@ -1,24 +1,40 @@
 KINGDOM 1.1.4 - BUILDING, REPLACEMENT, AND RELINKING INFORMATION
 
-Kingdom is distributed as a Windows x64 ONEDIR application. LGPL-covered Qt,
-PySide6, and Shiboken6 libraries are separate DLL or PYD files in the release,
-principally below the PySide6 and shiboken6 directories. They are dynamically
-loaded at runtime and are not statically linked into Kingdom.exe.
+The ordinary Kingdom 1.1.4 Windows x64 ONEDIR release contains both external
+LGPL-covered DLL/PYD components and LGPL-covered Python components frozen
+in Kingdom.exe. These require distinct replacement/recombination paths.
+Replacing external DLL/PYD files does not replace the frozen Python parts.
+This document concerns that exact ordinary release, not a future Store package.
 
 Obtaining matching source
 
-Use the source package identified in OPEN-SOURCE-SOURCE-AVAILABILITY.txt. It
-contains the exact unmodified upstream source archives for the copyleft-
-covered components in the release, their licenses and notices, and this file.
-PATCHES-NONE.txt confirms that no upstream source patches were applied.
+Use Kingdom-Technical-Materials-NOT-THE-APP.zip from GitHub release v1.1.4.
+Read docs/OPEN-SOURCE-SOURCE-AVAILABILITY.txt and START-HERE.txt at the
+extracted bundle root for the official download location, external checksum
+verification and the exact identities of its two inner ZIPs. The outer
+checksum is published separately, not embedded in these documents.
+These bundle-root paths describe this package; they do not attest that the
+same revision is already served by a public channel.
 
-Building replacement libraries
+Extract sources/Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip separately.
+Under its Kingdom-Third-Party-Corresponding-Sources-v1.1.4/ directory,
+COMPLIANCE/ contains the original replacement instructions, COMPONENTS.txt,
+PATCHES-NONE.txt and licenses; UPSTREAM/ contains the matching source archives.
+PATCHES-NONE.txt describes the unmodified official release, not recipient changes.
+
+Also extract recombination/Kingdom-1.1.4-Release-Bound-Recombination-Kit-B01H.zip
+separately. Its kit/README.txt and kit/documents/BUILDING-AND-RELINKING.txt
+supply the frozen-component recipe. The original archives and their historical
+documents are not rewritten by this public documentation update.
+
+A. Separate DLL/PYD components: building replacement libraries
 
 1. Use a Windows x64 build environment compatible with CPython 3.14.4 and its
    MSC v.1944 (MSVC 19.44 / Visual C++ 14.4x) ABI. The upstream Qt for Python
    instructions for Qt 6.11.2 remain authoritative for required build tools.
 2. Build Qt 6.11.2 from the included qtbase, qtsvg, qtimageformats, and
-   qttranslations sources. Build the modules actually listed in COMPONENTS.txt.
+   qttranslations sources. Build the modules listed in COMPLIANCE/COMPONENTS.txt
+   under the extracted source package's top-level directory.
 3. Build PySide6 and Shiboken6 6.11.2 from the included Qt for Python source,
    targeting the replacement Qt 6.11.2 build and CPython 3.14.
 4. Follow each upstream project's build instructions. Kingdom does not impose
@@ -28,7 +44,7 @@ Building replacement libraries
 PyInstaller 6.22.2 produced the ONEDIR wrapper, but rebuilding Kingdom.exe is
 not required to replace the separate LGPL libraries described here.
 
-Replacing and testing
+Replacing and testing separate components
 
 1. Work on a copy of the complete Kingdom distribution.
 2. Preserve file names, directory layout, architecture, and compatible ABI.
@@ -42,9 +58,86 @@ tools under tools/7zip: compatible rebuilt executables may replace the
 corresponding files while preserving the paths and command-line behavior used
 by Kingdom.
 
-Kingdom's proprietary source code is not required to replace these dynamically
-loaded libraries and tools. The Kingdom license expressly preserves the right
-to reverse engineer or debug Kingdom solely to the extent necessary to debug
-modifications to, or replacement of, an LGPL-covered component. Modified
-third-party components are not warranted or supported by PinguSama, except
-where mandatory law or the applicable third-party license requires otherwise.
+B. Frozen Python components: release-bound recombination
+
+The four frozen LGPL 6.11.2 module identities are:
+PySide6, PySide6.support, PySide6.support.deprecated and shiboken6.
+Their source is in UPSTREAM/pyside-setup-everywhere-src-6.11.2.zip under
+the source package's top-level directory. See kit/documents/COMPONENTS.txt.
+
+For this path, the kit specifies Windows x64, CPython 3.14.4 AMD64 and
+the Python standard library. PyInstaller, pip installs, a private checkout
+and Kingdom proprietary source are not required for frozen Python recombination.
+Native replacement builds still need the upstream tools described above.
+
+Use a separate recipient workspace. Verify the original application ZIP and
+the inner source ZIP against the size/SHA-256 values in
+docs/OPEN-SOURCE-SOURCE-AVAILABILITY.txt. After verification, name your input
+copies as below and extract the complete application ZIP under inputs/,
+preserving its Kingdom by PinguSama v1.1.4/ directory and all original files.
+Extract the kit so that kit/ is directly under the recipient workspace.
+Do not overlay kit documents onto the hash-bound original application tree.
+
+The following PowerShell example is the recipe supplied in kit/README.txt:
+
+  python -I -B .\kit\recombine_release.py verify-kit
+  python -I -B .\kit\recombine_release.py prepare-sources --source-archive '.\inputs\Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip' --output .\modified
+
+prepare-sources creates four editable LGPL sources and provenance.json.
+It substitutes the release configuration without adding a proof marker.
+Edit one or more sources compatibly, or provide compatible UTF-8 source
+with the same module identity. Preserve applicable notices and license terms.
+
+Example for a modified shiboken6 source, using its hash after editing:
+
+  $libraryHash = (Get-FileHash -Algorithm SHA256 .\modified\shiboken6.py).Hash
+  python -I -B .\kit\recombine_release.py recombine --source-dist '.\inputs\Kingdom by PinguSama v1.1.4' --workspace .\work --frozen "shiboken6=.\modified\shiboken6.py=$libraryHash"
+  python -I -B .\kit\recombine_release.py verify-derived --source-dist '.\inputs\Kingdom by PinguSama v1.1.4' --derived-dist .\work\derived_dist --report .\work\recombination-result.json
+
+At least one frozen replacement is required. Repeat --frozen NAME=PATH=SHA256
+for any additional module from the four identities above, using each edited
+source's exact hash. modified/ and work/ must be new outputs; the work
+workspace must have an existing parent and remain separate from inputs,
+replacement sources and kit. Existing outputs are not overwritten.
+
+Optional --native NAME=PATH=SHA256 is limited to the exact native allowlist
+in kit/binding.json. The tooling checks PE x64 format, not full ABI or
+functional compatibility. Manual changes to other external plugins remain
+outside the automation's preservation claim and must be recorded separately.
+
+The result is a separate unofficial copy in work/derived_dist.
+provenance.json and work/recombination-result.json are generated outputs,
+not pre-existing kit members. Verify-derived checks the declared replacements
+and preserved objects; it is not a functional or legal certification.
+Recombination does not execute the application or replacement source.
+Test the resulting variant separately in a suitable environment.
+Original input hashes identify the original release, not a modified derivative.
+
+Rights and distribution limits
+
+Kingdom remains proprietary and closed-source. Its proprietary source is not
+required by the supplied external-replacement and frozen-recombination recipes.
+Read the original Kingdom license and the exact release-bound V7 text in
+kit/documents/RECOMBINATION-PERMISSIONS-ADDENDUM.txt for application permissions,
+including necessary reverse engineering/debugging and the limited scope for
+recombined copies. No general relicensing of Kingdom is stated here.
+
+Third-party modification and redistribution rights arise under their own
+licenses. Tool allowlists, compatibility checks and publisher qualification
+procedures are not additional recipient license conditions. Only the two
+scripts enumerated in kit/LICENSE-COVERAGE.json are MIT licensed; that MIT
+license does not cover application binaries, the addendum or LGPL components.
+Keep applicable licenses/notices and satisfy source-delivery obligations for
+your own modifications; the original source ZIP does not cover later changes.
+
+The kit does not sign, install, package or run the application. A recombined
+copy does not automatically inherit official signature, trust, Microsoft Store
+identity, support or updates. Any subsequent recipient packaging/signing uses
+their own credentials and is separate from this recipe.
+
+Historical offline publication=PENDING fields in the kit are evidence limits,
+not a current availability statement. This document does not
+certify recipient receipt, legal effect of the addendum, MCS/CAC sufficiency,
+overall LGPL compliance or compliance of a future MSIX distribution.
+Modified third-party components are not warranted or supported by PinguSama,
+except where mandatory law or the applicable third-party license requires otherwise.

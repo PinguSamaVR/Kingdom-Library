@@ -1,23 +1,96 @@
 KINGDOM 1.1.4 - OPEN-SOURCE SOURCE AVAILABILITY
 
-The corresponding-source package for copyleft-covered third-party components
-distributed with Kingdom 1.1.4 is available as follows:
+Official technical download and external verification
 
-File: Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip
+The corresponding sources for copyleft-covered third-party components and
+the release-bound LGPL recombination kit for Kingdom 1.1.4 are supplied in:
+
+File: Kingdom-Technical-Materials-NOT-THE-APP.zip
+SHA-256: 7CD56C741E169B7E446085E651C1296003134808C64F2881C6EA8973CD11DBE3
+Size: 81683992 bytes
+Release page: https://github.com/PinguSamaVR/Kingdom-Library/releases/tag/v1.1.4
+Download: https://github.com/PinguSamaVR/Kingdom-Library/releases/download/v1.1.4/Kingdom-Technical-Materials-NOT-THE-APP.zip
+
+Verify the downloaded outer ZIP against the external SHA256SUMS.txt and
+release metadata for that exact bundle revision. The outer ZIP's checksum
+is deliberately not embedded in this archive or in BUNDLE-MANIFEST.json.
+The public filename is shared by revisions; a filename alone does not prove
+identity. Local construction of this bundle does not attest its publication
+or the revision currently served by the release page.
+
+This technical bundle is NOT the Kingdom application and is not required
+for normal use. Start with START-HERE.txt and BUNDLE-MANIFEST.json inside it.
+Extract the outer ZIP into a separate workspace, then extract each inner ZIP
+into its own directory after verifying its size and SHA-256.
+
+Third-party corresponding sources inside the bundle
+
+Path: sources/Kingdom-Third-Party-Corresponding-Sources-v1.1.4.zip
 SHA-256: 98E79FE019F5003881B4ECD214B7FA831B4E7CD069A19F66744900ED813FBD45
 Size: 81600356 bytes
-Release page: https://pingusama.itch.io/kingdom-library
 
-The corresponding-source package is distributed alongside Kingdom 1.1.4 on
-that release page.
+Its top-level directory is:
+Kingdom-Third-Party-Corresponding-Sources-v1.1.4/
 
-The package contains the exact unmodified upstream source archives for the
-covered components, applicable licenses and notices, a component inventory,
-PATCHES-NONE.txt, and BUILDING-AND-RELINKING.txt.
+Under that directory, UPSTREAM/ contains six original upstream archives:
+Qt for Python/PySide6/Shiboken6 6.11.2; Qt Base, SVG, Image Formats and
+Translations 6.11.2; and 7-Zip 26.03. COMPLIANCE/ contains COMPONENTS.txt,
+THIRD-PARTY-NOTICES.txt, PATCHES-NONE.txt, BUILDING-AND-RELINKING.txt and
+LICENSES/. MANIFESTS/ contains source provenance and SHA-256 inventories.
+The source ZIP does not contain OPEN-SOURCE-SOURCE-AVAILABILITY.txt.
 
-This source package concerns third-party components only. Kingdom's original
-application code, branding, documentation, and proprietary assets are not
-open source and are not included.
+Release-bound recombination kit inside the bundle
+
+Path: recombination/Kingdom-1.1.4-Release-Bound-Recombination-Kit-B01H.zip
+SHA-256: C1AFB47296E69F846BFE21081B792C4C882747DB2349862A4A7204479ACA7C10
+Size: 61000 bytes
+
+Paths beginning with sources/ and recombination/ refer to the outer bundle.
+The following kit/ paths become available after extracting the kit ZIP into
+its own recipient workspace, not directly inside the outer bundle.
+
+After extracting this inner ZIP, read kit/README.txt and
+kit/documents/BUILDING-AND-RELINKING.txt. The kit describes recombination
+of the PySide6, PySide6.support, PySide6.support.deprecated and shiboken6
+Python components frozen in Kingdom.exe, separately from external DLL/PYD
+replacement. Their source is in the same pyside-setup 6.11.2 upstream
+archive supplied by the source ZIP.
+
+The kit includes binding.json, source-preparation configuration, tooling,
+licenses, notices and the exact V7 text at
+kit/documents/RECOMBINATION-PERMISSIONS-ADDENDUM.txt.
+Only kit/recombine.py and kit/recombine_release.py are MIT licensed;
+see kit/LICENSE-COVERAGE.json and kit/LICENSE-MIT.txt. This does not
+relicense Kingdom, the addendum or third-party components.
+
+Separate application input
+
+The kit requires the original compiled application distribution, supplied
+separately on the GitHub release page as Kingdom.by.PinguSama.v1.1.4.zip.
+Size: 37758738 bytes
+SHA-256: 541771A0192DBB5934C9D84E7E6B7141D715B6ED66065217974FC8C919F0802C
+
+After verifying the bytes, a recipient may name their own input copy
+Kingdom by PinguSama v1.1.4.zip as used in the kit commands. File names alone
+do not establish identity. The application is not inside the technical bundle.
+
+Historical records and limits
+
+The two inner ZIPs are unchanged. Their original release-time documents,
+itch.io name mappings and offline publication-status fields remain historical
+records; they are not current availability statements. This document identifies
+the official GitHub download location without claiming that a previous
+standalone source download remains available on itch.io. Read the original
+source-package instructions together with the separate frozen-component
+instructions in the kit and docs/BUILDING-AND-RELINKING.txt in this bundle.
+
+Kingdom remains proprietary and closed-source. These technical materials do
+not contain Kingdom's proprietary application source code. Third-party
+components retain their own licenses and rights. The kit's limited
+release-bound application permissions are described by the exact V7 addendum;
+publication alone does not establish its legal effect or overall LGPL
+compliance. Recombined copies are unofficial and are not guaranteed to retain
+the publisher's signature, Microsoft Store identity or official updates.
 
 For source-availability or compliance questions, contact
 pingusama.info@gmail.com.
